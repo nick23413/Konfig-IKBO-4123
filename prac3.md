@@ -123,53 +123,6 @@ let config
 in  config
 ```
 
-# Грамматики
-
-```Python
-import random
-
-def parse_bnf(text):
-    grammar = {}
-    # Разделяем входной текст на строки и обрабатываем каждую строку
-    rules = [line.strip() for line in text.strip().split('\n') if line.strip()]
-    for rule in rules:
-        # Разделяем правило на имя и тело
-        name, body = rule.split('=')
-        name = name.strip()  # Убираем лишние пробелы в имени
-        # Разделяем тело на альтернативы, убирая пробелы
-        alternatives = [alt.strip().split() for alt in body.split('|')]
-        grammar[name] = alternatives  # Записываем в словарь
-
-    return grammar
-
-def generate_phrase(grammar, start, depth=0, max_depth=3):
-    if depth > max_depth:
-        return ''  # Возвращаем пустую строку, если превышена максимальная глубина
-
-    if start in grammar:
-        # Выбираем случайное правило для данного нетерминала
-        seq = random.choice(grammar[start])
-        # Рекурсивно генерируем строку для каждого элемента последовательности без пробелов
-        return ''.join([generate_phrase(grammar, name, depth + 1, max_depth) for name in seq])
-    
-    return str(start)  # Если это терминал, просто возвращаем его
-
-# Обновленная БНФ для укороченных выражений алгебры логики
-bnf_text = '''
-
-'''
-
-# Преобразуем БНФ в словарь
-grammar_dict = parse_bnf(bnf_text)
-
-# Генерация нескольких коротких фраз
-num_phrases = 10  # Количество строк для генерации
-for i in range(num_phrases):
-    print(generate_phrase(grammar_dict, 'E', max_depth=10))  # Вызываем с ограничением глубины
-
-
-```
-
 # Задача 3
 
 ```
