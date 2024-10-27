@@ -183,4 +183,41 @@ $ git log
 | Date:   Sun Oct 27 11:11:46 2024 +0300
 | 
 |     First program
+
+First program
+
+----------------------------------------
+Object ID: 76afbe2870db34c3a6fddcdd3743b8c8a402d34f
+Content:
+100644 blob f7cf60e14f9a9e9805e0463e7fa33b6c91204c4d	prog.py
+100644 blob 0d890f0ac261649a0329efc54788e5380a610f4b	readme.md
+
+----------------------------------------
+Object ID: f7cf60e14f9a9e9805e0463e7fa33b6c91204c4d
+Content:
+print("Hello, world!")
+
+----------------------------------------
+Object ID: 0d890f0ac261649a0329efc54788e5380a610f4b
+Content:
+Just a README file.
+Author: Coder 1
+
+----------------------------------------
+Object ID: 27ea4b92b6f71ed0e25c36316929c0ee753f1429
+Content:
+100644 blob f7cf60e14f9a9e9805e0463e7fa33b6c91204c4d	prog.py
+100644 blob 5f5fd4c84d1d9ce71e57afcabcf376e6d38ae8f4	readme.md
+
+----------------------------------------
+Object ID: 5f5fd4c84d1d9ce71e57afcabcf376e6d38ae8f4
+Content:
+Just a README file.
+
+----------------------------------------
+Object ID: 5114700b1b645fea04e657e23eec4af1171a57a4
+Content:
+100644 blob f7cf60e14f9a9e9805e0463e7fa33b6c91204c4d	prog.py
+
+----------------------------------------
 ```
