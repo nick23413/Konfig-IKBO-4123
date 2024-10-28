@@ -183,6 +183,55 @@ $ git log
 | Date:   Sun Oct 27 11:11:46 2024 +0300
 | 
 |     First program
+```
+
+# Задача 4
+
+```
+import subprocess
+
+def list_all_git_objects():
+    objects = subprocess.check_output(['git', 'rev-list', '--all', '--objects']).decode().splitlines()
+
+    for obj_line in objects:
+        obj_id = obj_line.split()[0]
+        try:
+            content = subprocess.check_output(['git', 'cat-file', '-p', obj_id]).decode()
+            print("Object ID: {}\nContent:\n{}\n{}".format(obj_id, content, "-"*40))
+        except subprocess.CalledProcessError as e:
+            print("Error reading object {}: {}".format(obj_id, e))
+
+list_all_git_objects()
+```
+
+```
+$ cd ../my_project
+$ python3 gitt.py
+Object ID: e62fe9124b0014c307ac7a8a35754d7129d7f7a6
+Content:
+tree 76afbe2870db34c3a6fddcdd3743b8c8a402d34f
+parent 3367a5fe8c09593c164165c8e7e7f83989d8e0bd
+author coder1 <student@mirea.ru> 1730066938 +0300
+committer coder1 <student@mirea.ru> 1730066938 +0300
+
+New author
+
+----------------------------------------
+Object ID: 3367a5fe8c09593c164165c8e7e7f83989d8e0bd
+Content:
+tree 27ea4b92b6f71ed0e25c36316929c0ee753f1429
+parent dea4dd0f8a9dae53899af42697636dd25f9e16df
+author coder2 <coder2@yandex.ru> 1730066713 +0300
+committer coder2 <coder2@yandex.ru> 1730066713 +0300
+
+Adding readme.md
+
+----------------------------------------
+Object ID: dea4dd0f8a9dae53899af42697636dd25f9e16df
+Content:
+tree 5114700b1b645fea04e657e23eec4af1171a57a4
+author coder1 <student@mirea.ru> 1730065891 +0300
+committer coder1 <student@mirea.ru> 1730065891 +0300
 
 First program
 
