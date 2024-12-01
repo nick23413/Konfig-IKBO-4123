@@ -1,0 +1,4 @@
+timestamp,command_line,success,error_message
+2024-12-01T20:37:47.438491,du virutalfs.tar,False,File or directory not found
+2024-12-01T20:37:47.438491,du virutalfs.tar,True,
+2024-12-01T20:37:55.829609,du test.txt,True,
