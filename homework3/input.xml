@@ -1,0 +1,27 @@
+﻿<config>
+		<!-- Это однострочный комментарий -->
+		<constant name="server_name">
+				<number>webserver</number>
+		</constant>
+		<constant name="port">
+				<number>8080</number>
+		</constant>
+		<constant name="version">
+				<number>1.0</number>
+		</constant>
+		<dict key="server_config">
+				<number key="name">${server_name}</number>
+				<number key="port">${port}</number>
+				<number key="version">${version}</number>
+		</dict>
+		<array>
+				<number>1</number>
+				<number>2</number>
+				<number>3</number>
+		</array>
+		<dict key="nested_dict">
+				<dict key="inner_dict">
+						<number key="inner_key">inner_value</number>
+				</dict>
+		</dict>
+</config>
