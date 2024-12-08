@@ -1,0 +1,7 @@
+﻿<config>
+		<visualizer_path>C:\Users\nickr\AppData\Roaming\npm\mmdc.cmd</visualizer_path>
+		<package_name>express</package_name>
+		<output_image_path>C:\Users\nickr\Pictures\graph.png</output_image_path>
+		<max_depth>2</max_depth>
+		<repo_url>https://registry.npmjs.org/</repo_url>
+</config>
